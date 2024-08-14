@@ -9,20 +9,22 @@ namespace tdd_bobs_bagels.CSharp.Main
     public class Basket
     {
         private List<string> _bagelBasket = new List<string>();
-        private int BagelBasketMax { get; set; } = 0;
+        private int BagelBasketMax { get; set; } = 3;
+        private bool BagelBasketFull { get { return _bagelBasket.Count >= BagelBasketMax ? true : false; } }
 
         public bool Add(string bagel)
         {
-            BagelBasketMax = 3;
+      
             _bagelBasket.Add("Cream cheese");
             
-            if (_bagelBasket.Count < BagelBasketMax)
+            if (!BagelBasketFull)
             {
                 _bagelBasket.Add(bagel);
                 return true;
             }
-            else return false;
+            return false;
         }
+
 
         public bool Remove(string bagel)
         {
