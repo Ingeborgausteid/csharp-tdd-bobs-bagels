@@ -25,9 +25,10 @@ namespace tdd_bobs_bagels.CSharp.Main
             return false;
         }
 
-        public int ChangeCapacity()
+        public int ChangeCapacity(int capacity)
         {
-            throw new NotImplementedException();
+            BagelBasketMax = capacity;
+            return BagelBasketMax;
         }
 
         public bool Remove(string bagel)

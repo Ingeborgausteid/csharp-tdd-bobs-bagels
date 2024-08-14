@@ -60,7 +60,7 @@ public class BasketTests
 
         Basket basket = new Basket();
 
-        int newCapacity = basket.ChangeCapacity();
+        int newCapacity = basket.ChangeCapacity(capacity);
 
         Assert.That(expected == newCapacity);
     }
