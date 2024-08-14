@@ -51,5 +51,17 @@ public class BasketTests
         Assert.That(expected == canAddBagel);
     }
 
+    //4. As a Bob's Bagel manager, So that I can expand my business, I'd like to change the capacity of baskets.
+    [Test]
+    public void ChangeCapacityTest()
+    {
+        int capacity = 5;
+        int expected = 5;
 
+        Basket basket = new Basket();
+
+        int newCapacity = basket.ChangeCapacity();
+
+        Assert.That(expected == newCapacity);
+    }
 }

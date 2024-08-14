@@ -25,6 +25,10 @@ namespace tdd_bobs_bagels.CSharp.Main
             return false;
         }
 
+        public int ChangeCapacity()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool Remove(string bagel)
         {
