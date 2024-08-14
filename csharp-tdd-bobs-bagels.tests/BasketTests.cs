@@ -1,4 +1,5 @@
 namespace csharp_tdd_bobs_bagels.tests;
+using tdd_bobs_bagels.CSharp.Main;
 
 public class BasketTests
 {
@@ -8,8 +9,15 @@ public class BasketTests
     }
 
     [Test]
-    public void Test1()
+    public void AddBagelToBasketTest()
     {
-        Assert.Pass();
+        string bagel = "Classic";
+        bool expected = true;
+        Basket basket = new Basket();
+
+        bool canAddBagel = basket.Add(bagel);
+       
+        Assert.That(expected == canAddBagel);
     }
+
 }
