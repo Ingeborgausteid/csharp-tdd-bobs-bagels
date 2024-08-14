@@ -8,9 +8,22 @@ namespace tdd_bobs_bagels.CSharp.Main
 {
     public class Basket
     {
+        private List<string> _bagelBasket = new List<string>();
+        private int BagelBasketMax { get; set; } = 0;
+
         public bool Add(string bagel)
         {
-            throw new NotImplementedException();
+            BagelBasketMax = 3;
+            _bagelBasket.Add("Cream cheese");
+            
+            if (_bagelBasket.Count < BagelBasketMax)
+            {
+                _bagelBasket.Add(bagel);
+                return true;
+            }
+            else return false;
         }
+
+        
     }
 }
