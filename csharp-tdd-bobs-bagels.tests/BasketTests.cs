@@ -21,6 +21,7 @@ public class BasketTests
         Assert.That(expected == canAddBagel);
     }
 
+    //2. As a member of the public, So I can change my order, I'd like to remove a bagel from my basket.
     [Test]
     public void RemoveBagelFromBasketTest()
     {
@@ -31,6 +32,19 @@ public class BasketTests
         bool isRemoved = basket.Remove(bagel);
 
         Assert.That(expected == isRemoved);
+    }
+
+    //3. As a member of the public, So that I can not overfill my small bagel basket, I'd like to know when my basket is full when I try adding an item beyond my basket capacity.
+    [Test]
+    public void BasketIsFullTest()
+    {
+        string bagel = "Classic";
+        bool expected = false;
+        Basket basket = new Basket();
+
+        bool canAddBagel = basket.Add(bagel);
+
+        Assert.That(expected == canAddBagel);
     }
 
 }
