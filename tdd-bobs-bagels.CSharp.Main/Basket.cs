@@ -26,7 +26,14 @@ namespace tdd_bobs_bagels.CSharp.Main
 
         public bool Remove(string bagel)
         {
-            throw new NotImplementedException();
+            _bagelBasket.Add("Classic");
+            
+            if (_bagelBasket.Contains(bagel))
+            {
+                _bagelBasket.Remove(bagel);
+                return true;
+            }
+            return false;
         }
     }
 }
