@@ -64,4 +64,18 @@ public class BasketTests
 
         Assert.That(expected == newCapacity);
     }
+
+    //5. As a member of the public, So that I can maintain my sanity, I'd like to know if I try to remove an item that doesn't exist in my basket.
+    [Test]
+    public void BagelIsNotInBasketTest()
+    {
+        string bagel = "Tomato";
+        bool expected = false;
+        Basket basket = new Basket();
+
+        bool bagelExist = basket.Remove(bagel);
+
+        Assert.That(expected == bagelExist);
+
+    }
 }
