@@ -1,6 +1,6 @@
 namespace csharp_tdd_bobs_bagels.tests;
 
-public class Tests
+public class BasketTests
 {
     [SetUp]
     public void Setup()
