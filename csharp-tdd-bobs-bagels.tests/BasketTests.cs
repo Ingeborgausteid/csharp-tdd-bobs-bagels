@@ -39,12 +39,17 @@ public class BasketTests
     public void BasketIsFullTest()
     {
         string bagel = "Classic";
+        string bagel2 = "Salmon";
+        string bagel3 = "Avocado";
         bool expected = false;
         Basket basket = new Basket();
+        basket.Add(bagel);
+        basket.Add(bagel2);
 
-        bool canAddBagel = basket.Add(bagel);
+        bool canAddBagel = basket.Add(bagel3);
 
         Assert.That(expected == canAddBagel);
     }
+
 
 }
